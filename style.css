@@ -1,15 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f4f4f4;
     margin: 0;
     padding: 0;
+    background: #f4f4f4;
 }
 
 header {
     background: #0073e6;
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
 nav a {
@@ -18,13 +18,79 @@ nav a {
     text-decoration: none;
 }
 
-main {
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #0073e6;
+    color: white;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: #0073e6;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.blog {
     padding: 20px;
+    text-align: center;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    background: white;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about, .contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #0073e6;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 footer {
     background: #0073e6;
     color: white;
+    text-align: center;
     padding: 10px;
     margin-top: 20px;
 }
