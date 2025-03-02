@@ -170,3 +170,64 @@ nav a:hover {
     font-size: 2.2rem;
     margin-bottom: 2rem;
     color: #2c3e50;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-content a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    nav a {
+        margin: 0 0.75rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-content p {
+        font-size: 1rem;
+    }
+}
