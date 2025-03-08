@@ -17,8 +17,8 @@ header {
 }
 
 .logo img {
-    height: 20px; /* Logo hündürlüyü */
-    width: 20px; /* Enini avtomatik tənzimləyir */
+    height: 30px; /* Logo hündürlüyü */
+    width: 30px; /* Enini avtomatik tənzimləyir */
     object-fit: cover
 }
 
