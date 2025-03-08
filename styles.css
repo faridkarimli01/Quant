@@ -70,17 +70,20 @@ nav ul li a {
     font-size: 18px;
 }
 
-.services-container {
-    display: flex; /* Enable flexbox layout */
-    justify-content: space-around; /* Distribute space around items */
+/* Our Services Section */
+.Our Services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background: white;
 }
 
-.service {
-    width: 30%; /* Each service takes roughly 30% of the container width */
-    /* Add any other styling you want for each service box, like borders, padding, etc. */
+.Service {
+    text-align: center;
+    max-width: 300px;
 }
 
-.feature h2 {
+.Service h2 {
     color: #0b3626;
 }
 
