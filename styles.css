@@ -68,8 +68,13 @@ nav ul li a {
     background: #29b473;
     padding: 12px 20px;
     font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
 
-    .analysis-container {
+/* Analysis & Charts Section */
+.analysis-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -91,6 +96,17 @@ nav ul li a {
     text-align: center;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .analysis-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .analysis, .charts {
+        max-width: 100%;
+    }
+}
 
 /* Footer */
 footer {
