@@ -16,9 +16,9 @@ header {
     color: white;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo img {
+    height: 30px; /* Logo hündürlüyü */
+    width: 30px; /* Enini avtomatik tənzimləyir */
 }
 
 nav ul {
