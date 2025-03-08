@@ -7,26 +7,38 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>What Are Stocks?</h1>
-        <a href="/index.html">Back to Home</a>
-    </header>
-    <main>
-        <section class="lesson-content">
-            <h2>Stocks: Own a Piece of the Action</h2>
-            <p>A stock is a share of ownership in a company. When you buy a stock, its value can grow if the company does well!</p>
-            <ul>
-                <li><strong>Example</strong>: Buying Tesla stock means you own a tiny part of Tesla.</li>
-                <li><strong>Key Idea</strong>: Prices change based on company success and market trends.</li>
-            </ul>
-            <div class="chatbot-placeholder">
-                <p><strong>Ask InvestBot:</strong> "What’s a stock?" (Chat coming soon!)</p>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">InvestBot</a>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <button class="dropbtn">Sections ▼</button>
+                <div class="dropdown-content">
+                    <a href="/lessons/stocks.html">Stocks</a>
+                    <a href="/lessons/bonds.html">Bonds</a>
+                    <a href="/lessons/diversification.html">Diversification</a>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </nav>
+
+    <section class="lesson-content">
+        <h1>What Are Stocks?</h1>
+        <p>A stock is a share of ownership in a company. When you buy a stock, its value can grow if the company does well!</p>
+        <ul>
+            <li><strong>Example</strong>: Buying Tesla stock means you own a tiny part of Tesla.</li>
+            <li><strong>Key Idea</strong>: Prices change based on company success and market trends.</li>
+        </ul>
+        <div class="chatbot-placeholder">
+            <button onclick="alert('InvestBot says: A stock is a share of a company!')">Ask InvestBot: "What’s a stock?"</button>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 InvestBot Learning Hub</p>
+        <p>© 2025 InvestBot Learning Hub | Powered by AI</p>
     </footer>
+
     <script src="/js/script.js"></script>
 </body>
 </html>
