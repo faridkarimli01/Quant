@@ -7,28 +7,57 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>InvestBot Learning Hub</h1>
-        <p>Learn Investing the Smart Way with AI</p>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Welcome!</h2>
-            <p>InvestBot guides you through investing fundamentals, from stocks to diversification, with simple explanations and interactive lessons.</p>
-            <button onclick="alert('InvestBot says: Chat feature coming soon!')">Chat with InvestBot</button>
-        </section>
-        <section class="lessons-preview">
-            <h2>Start Learning</h2>
-            <ul>
-                <li><a href="/lessons/stocks.html">What Are Stocks?</a></li>
-                <li><a href="/lessons/bonds.html">What Are Bonds?</a></li>
-                <li><a href="/lessons/diversification.html">What Is Diversification?</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">InvestBot</a>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <button class="dropbtn">Sections ▼</button>
+                <div class="dropdown-content">
+                    <a href="/lessons/stocks.html">Stocks</a>
+                    <a href="/lessons/bonds.html">Bonds</a>
+                    <a href="/lessons/diversification.html">Diversification</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Learn Investing with InvestBot</h1>
+        <p>Your AI-powered guide to mastering investing fundamentals.</p>
+        <button onclick="alert('InvestBot says: Chat feature coming soon!')">Chat with InvestBot</button>
+    </section>
+
+    <!-- Lessons Preview Section -->
+    <section class="lessons-preview">
+        <h2>Explore Lessons</h2>
+        <div class="lesson-cards">
+            <div class="card">
+                <h3>Stocks</h3>
+                <p>Learn what stocks are and how they work.</p>
+                <a href="/lessons/stocks.html" class="card-btn">Start Lesson</a>
+            </div>
+            <div class="card">
+                <h3>Bonds</h3>
+                <p>Discover how bonds can stabilize your portfolio.</p>
+                <a href="/lessons/bonds.html" class="card-btn">Start Lesson</a>
+            </div>
+            <div class="card">
+                <h3>Diversification</h3>
+                <p>Understand how to reduce risk by diversifying.</p>
+                <a href="/lessons/diversification.html" class="card-btn">Start Lesson</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2025 InvestBot Learning Hub</p>
+        <p>© 2025 InvestBot Learning Hub | Powered by AI</p>
     </footer>
+
     <script src="/js/script.js"></script>
 </body>
 </html>
