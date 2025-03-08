@@ -3,76 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Site Name</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Invest Blog</h1>
-        <nav>
-            <a href="#">Home Page</a>
-            <a href="#blog">Blog</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+        <nav class="navbar">
+            <div class="logo">YourLogo</div>
+            <div class="nav-right">
+                <select class="region-select">
+                    <option value="us">US</option>
+                    <option value="uk">UK</option>
+                </select>
+                <button class="signup-btn">Sign Up</button>
+                <button class="menu-btn">☰</button>
+            </div>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h2>Welcome to the World of Investment!</h2>
-        <p>Here you can find the latest information about investments.</p>
-        <a href="#blog" class="btn">Read More</a>
-    </section>
-
-    <section id="blog" class="blog">
-        <h2>Recent Articles</h2>
-        <div class="blog-container">
-            <!-- Posts will be dynamically inserted here by JavaScript -->
+        <div class="hero-content">
+            <div class="promo-text">
+                <p>YourBrand Presents</p>
+                <h1>The Lost City of Gold</h1>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <img src="https://source.unsplash.com/600x400/?investment,team" alt="About Quant" class="about-image">
-            <p>Welcome to Quant, your go-to source for insightful investment blogs. Our mission is to provide data-driven analysis, market insights, and in-depth research to help investors make informed financial decisions.</p>
-            <p>We explore topics such as stock market trends, value investing strategies, and the impact of macroeconomic factors on financial markets. Whether you're a seasoned investor or just starting, our content is designed to enhance your understanding of the ever-evolving world of investments.</p>
-            <p>At Quant, we believe that knowledge is the key to successful investing. Our goal is to simplify complex financial concepts and deliver actionable insights backed by research and analytics.</p>
-            <p>Stay ahead in the market—follow our latest posts and make smarter investment choices with Quant!</p>
-        </div>
-    </section>
+    <!-- Footer (optional, minimal for now) -->
+    <footer>
+        <p>© 2025 Your Site Name. All rights reserved.</p>
+    </footer>
 
-    <p id="demo">Click the button!</p>
-    <button onclick="changeText()">Click Me</button>
     <script src="script.js"></script>
-
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <div class="contact-content">
-            <img src="https://source.unsplash.com/100x100/?email,contact" alt="Contact Icon" class="contact-image">
-            <p>For contact: <a href="mailto:krml13579@gmail.com">krml13579@gmail.com</a></p>
-        </div>
-    </section>
-
-    <!-- Load posts.js first, then the inline script -->
-    <script src="posts.js"></script>
-    <script>
-        document.querySelectorAll('.read-more').forEach(button => {
-            button.addEventListener('click', () => {
-                const post = button.closest('.blog-post');
-                const preview = post.querySelector('.preview');
-                const fullContent = post.querySelector('.full-content');
-                
-                if (fullContent.style.display === 'none') {
-                    preview.style.display = 'none';
-                    fullContent.style.display = 'block';
-                    button.textContent = 'Read Less';
-                } else {
-                    preview.style.display = 'block';
-                    fullContent.style.display = 'none';
-                    button.textContent = 'Read More';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
