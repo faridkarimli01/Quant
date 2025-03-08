@@ -68,24 +68,29 @@ nav ul li a {
     background: #29b473;
     padding: 12px 20px;
     font-size: 18px;
-}
 
-/* Our Services Section */
-.Our Services {
+    .analysis-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Bölmələr arasında boşluq */
     padding: 50px 20px;
-    background: white;
 }
 
-.Service {
-    text-align: center;
-    max-width: 300px;
+.analysis, .charts {
+    flex: 1; /* Hər biri bərabər ölçüdə olacaq */
+    max-width: 48%; /* Ekrana uyğun olaraq genişlik təyin edirik */
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.Service h2 {
+.analysis h2, .charts h2 {
     color: #0b3626;
+    text-align: center;
 }
+
 
 /* Footer */
 footer {
