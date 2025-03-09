@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Finance</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aifinance.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome üçün -->
 </head>
 <body>
     <header>
@@ -22,29 +23,61 @@
             </ul>
         </nav>
     </header>
-    
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AI Finance: The Future of Investment</h1>
+            <p>Learn how artificial intelligence is revolutionizing the world of finance and investment.</p>
+            <a href="#questions" class="cta-button">Explore More</a>
+        </div>
+    </section>
+
     <main>
-        <h1>AI Finance</h1>
-        <div class="search-container">
-            <input type="text" placeholder="Enter your question about AI & Finance...">
-            <button><i class="fa fa-search"></i></button>
-        </div>
-        
-        <div class="suggested-questions">
-            <h2>Suggested Questions:</h2>
-            <ul>
-                <li>How does AI predict stock prices?</li>
-                <li>What are the best AI tools for trading?</li>
-                <li>Can AI beat the stock market?</li>
-            </ul>
-        </div>
-        
-        <div class="answer-section">
-            <h2>Answer:</h2>
-            <p>Select a question to see the answer.</p>
-        </div>
+        <section id="questions" class="questions-section">
+            <h2>Common Questions</h2>
+            <div class="faq-container">
+                <div class="question">
+                    <h3>How does AI predict stock prices?</h3>
+                    <p>AI uses historical data, machine learning algorithms, and statistical models to predict stock prices. It analyzes trends and patterns in the data to forecast future movements.</p>
+                </div>
+                <div class="question">
+                    <h3>What are the best AI tools for trading?</h3>
+                    <p>Some of the best AI tools for trading include Alpha Vantage, Trade Ideas, and MetaTrader 4, which use machine learning to analyze stock market trends and make trading decisions.</p>
+                </div>
+                <div class="question">
+                    <h3>Can AI beat the stock market?</h3>
+                    <p>AI has the potential to beat the stock market by processing large amounts of data quickly and making more accurate predictions. However, it is not foolproof and depends on various market conditions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-tools">
+            <h2>AI Tools for Finance</h2>
+            <div class="tools-container">
+                <div class="tool">
+                    <img src="tool1.png" alt="Tool 1">
+                    <h3>Tool 1: Alpha Vantage</h3>
+                    <p>Provides free APIs for real-time and historical market data.</p>
+                </div>
+                <div class="tool">
+                    <img src="tool2.png" alt="Tool 2">
+                    <h3>Tool 2: MetaTrader 4</h3>
+                    <p>Popular trading platform that incorporates machine learning for analysis.</p>
+                </div>
+                <div class="tool">
+                    <img src="tool3.png" alt="Tool 3">
+                    <h3>Tool 3: Trade Ideas</h3>
+                    <p>AI-powered stock scanning and trading software for active investors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Start Investing with AI?</h2>
+            <a href="#signup" class="cta-button">Sign Up Now</a>
+        </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 Quant Script. All rights reserved.</p>
     </footer>
