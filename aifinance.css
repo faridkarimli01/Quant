@@ -1,66 +1,164 @@
-/* AI Finance Bölməsi */
-.ai-finance-section {
+/* Ümumi səhifə dizaynı */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo-container img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Aktiv link üçün */
+nav ul li a.active {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #f4a300;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #e39100;
+}
+
+/* Questions Section */
+.questions-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.questions-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.faq-container .question {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container .question h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.faq-container .question p {
+    font-size: 1rem;
+}
+
+/* AI Tools Section */
+.ai-tools {
+    background-color: #f4f4f4;
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Axtarış Qutusu */
-.search-box {
-    width: 60%;
-    margin: 0 auto;
+.ai-tools h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.tools-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.search-box input {
-    width: 80%;
-    padding: 15px;
-    font-size: 18px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    outline: none;
+.tools-container .tool {
+    width: 30%;
+    margin: 10px 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-.search-box button {
-    padding: 15px 20px;
-    font-size: 18px;
-    background-color: #29b473;
+.tools-container .tool img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.tools-container .tool h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #333;
     color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-/* Suggested Questions və Answer Box */
-.content-box {
-    width: 60%;
-    margin: 0 auto;
+    padding: 50px 20px;
     text-align: center;
 }
 
-.suggested-questions, .answer-box {
-    background: #f8f9fa;
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.suggested-questions ul {
-    list-style: none;
-    padding: 0;
-}
-
-.suggested-questions li {
-    cursor: pointer;
-    color: #0b3626;
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.suggested-questions li:hover {
-    text-decoration: underline;
+    text-align: center;
 }
