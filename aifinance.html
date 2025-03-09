@@ -4,92 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Finance</title>
-    <link rel="stylesheet" href="aifinance.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header ve Navigation Burada -->
     <header>
-        <div class="logo">Quant Script</div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="aifinance.html">AI Finance</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="ai-finance.html" class="active">AI Finance</a></li>
                 <li><a href="#" class="btn">Sign Up</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- AI Finance Bölməsi -->
-    <section id="ai-finance" class="ai-finance-section">
-        <h2>AI Finance: Frequently Asked Questions</h2>
+    <section class="hero">
+        <h1>AI Finance</h1>
+        <p>Artificial Intelligence in Financial Markets</p>
+        <a href="#" class="btn">Explore AI Tools</a>
+    </section>
+
+    <section class="ai-finance-content">
+        <h2>AI-Powered Financial Insights</h2>
+        <p>Get smart investment strategies with AI-driven market analysis.</p>
+
         <div class="search-container">
-            <input type="text" id="search" placeholder="Search for a question...">
-            <button onclick="searchQuestions()">Search</button>
+            <input type="text" id="search" placeholder="Ask AI Finance...">
+            <button onclick="searchAI()">Search</button>
         </div>
 
-        <ul id="question-list" class="question-list">
-            <!-- Suallar buraya yüklənəcək -->
-        </ul>
+        <div class="suggestions">
+            <p>Try: <span onclick="fillSearch('What are the best stocks to buy?')">What are the best stocks to buy?</span> | 
+            <span onclick="fillSearch('How does AI predict market trends?')">How does AI predict market trends?</span></p>
+        </div>
 
-        <div id="answer" class="answer" style="display:none;">
-            <!-- Cavab buraya göstəriləcək -->
+        <div class="ai-results" id="ai-results">
+            <p>Results will appear here...</p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Quant Script. All rights reserved.</p>
     </footer>
 
-    <script>
-        // AI Finance FAQ Sualları və Cavabları
-        const questions = [
-            {
-                question: "What is AI Finance?",
-                answer: "AI Finance uses machine learning and artificial intelligence to analyze financial markets and make investment decisions."
-            },
-            {
-                question: "How does market analysis work?",
-                answer: "Market analysis involves studying historical data and trends to predict future market movements."
-            },
-            {
-                question: "What is the role of AI in stock trading?",
-                answer: "AI helps in making faster and more accurate trading decisions by analyzing huge datasets in real-time."
-            },
-            {
-                question: "How do I start investing in AI?",
-                answer: "Start by researching AI-based companies or investment funds that focus on AI technologies and innovations."
-            }
-        ];
-
-        // Axtarış funksiyası
-        function searchQuestions() {
-            const searchTerm = document.getElementById('search').value.toLowerCase();
-            const filteredQuestions = questions.filter(q => q.question.toLowerCase().includes(searchTerm));
-
-            const questionList = document.getElementById('question-list');
-            questionList.innerHTML = ''; // Əvvəlki nəticələri təmizləyirik
-
-            filteredQuestions.forEach(q => {
-                const li = document.createElement('li');
-                li.textContent = q.question;
-                li.onclick = () => showAnswer(q.answer);
-                questionList.appendChild(li);
-            });
-        }
-
-        // Cavab göstərmə funksiyası
-        function showAnswer(answer) {
-            const answerDiv = document.getElementById('answer');
-            answerDiv.style.display = 'block';
-            answerDiv.innerHTML = `<p>${answer}</p>`;
-        }
-
-        // Başlanğıcda bütün sualları göstərmək
-        searchQuestions();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
