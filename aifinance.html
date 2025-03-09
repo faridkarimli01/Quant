@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Finance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header ve Navigation Burada -->
+    <header>
+        <div class="logo">Quant Script</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="ai-finance.html">AI Finance</a></li>
+                <li><a href="#" class="btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- AI Finance Bölməsi -->
+    <section id="ai-finance" class="ai-finance-section">
+        <h2>AI Finance: Frequently Asked Questions</h2>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a question...">
+            <button onclick="searchQuestions()">Search</button>
+        </div>
+
+        <ul id="question-list" class="question-list">
+            <!-- Suallar buraya yüklənəcək -->
+        </ul>
+
+        <div id="answer" class="answer" style="display:none;">
+            <!-- Cavab buraya göstəriləcək -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Quant Script. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // AI Finance FAQ Sualları və Cavabları
+        const questions = [
+            {
+                question: "What is AI Finance?",
+                answer: "AI Finance uses machine learning and artificial intelligence to analyze financial markets and make investment decisions."
+            },
+            {
+                question: "How does market analysis work?",
+                answer: "Market analysis involves studying historical data and trends to predict future market movements."
+            },
+            {
+                question: "What is the role of AI in stock trading?",
+                answer: "AI helps in making faster and more accurate trading decisions by analyzing huge datasets in real-time."
+            },
+            {
+                question: "How do I start investing in AI?",
+                answer: "Start by researching AI-based companies or investment funds that focus on AI technologies and innovations."
+            }
+        ];
+
+        // Axtarış funksiyası
+        function searchQuestions() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const filteredQuestions = questions.filter(q => q.question.toLowerCase().includes(searchTerm));
+
+            const questionList = document.getElementById('question-list');
+            questionList.innerHTML = ''; // Əvvəlki nəticələri təmizləyirik
+
+            filteredQuestions.forEach(q => {
+                const li = document.createElement('li');
+                li.textContent = q.question;
+                li.onclick = () => showAnswer(q.answer);
+                questionList.appendChild(li);
+            });
+        }
+
+        // Cavab göstərmə funksiyası
+        function showAnswer(answer) {
+            const answerDiv = document.getElementById('answer');
+            answerDiv.style.display = 'block';
+            answerDiv.innerHTML = `<p>${answer}</p>`;
+        }
+
+        // Başlanğıcda bütün sualları göstərmək
+        searchQuestions();
+    </script>
+</body>
+</html>
