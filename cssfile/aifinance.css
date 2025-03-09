@@ -1,0 +1,65 @@
+/* AI Finance Section */
+.ai-finance-section {
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ai-finance-section h2 {
+    color: #0b3626;
+    margin-bottom: 20px;
+}
+
+.ai-finance-section .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.ai-finance-section input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ai-finance-section button {
+    width: 25%;
+    padding: 10px;
+    background-color: #29b473;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ai-finance-section button:hover {
+    background-color: #248e5b;
+}
+
+.ai-finance-section .question-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.ai-finance-section .question-list li {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.ai-finance-section .answer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f7f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
