@@ -7,47 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header (Ana səhifə ilə eyni) -->
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="quantscript.png" alt="Logo">
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="ai-finance.html" class="active">AI Finance</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="aifinance.html" class="active">AI Finance</a></li>
                 <li><a href="#" class="btn">Sign Up</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section (Başlıq hissəsi eyni qalır) -->
     <section class="hero">
         <h1>AI Finance</h1>
         <p>Artificial Intelligence in Financial Markets</p>
-        <a href="#" class="btn">Explore AI Tools</a>
     </section>
 
-    <section class="ai-finance-content">
-        <h2>AI-Powered Financial Insights</h2>
-        <p>Get smart investment strategies with AI-driven market analysis.</p>
-
+    <!-- AI Finance üçün ORTA HİSSƏ (Tam Unikal Dizayn) -->
+    <section class="ai-finance-section">
         <div class="search-container">
-            <input type="text" id="search" placeholder="Ask AI Finance...">
-            <button onclick="searchAI()">Search</button>
+            <input type="text" id="search-input" placeholder="Enter your question...">
+            <button onclick="searchQuestion()">Search</button>
         </div>
 
-        <div class="suggestions">
-            <p>Try: <span onclick="fillSearch('What are the best stocks to buy?')">What are the best stocks to buy?</span> | 
-            <span onclick="fillSearch('How does AI predict market trends?')">How does AI predict market trends?</span></p>
+        <div class="suggested-questions">
+            <h2>Suggested Questions:</h2>
+            <ul>
+                <li onclick="setQuestion('How does AI predict stock prices?')">How does AI predict stock prices?</li>
+                <li onclick="setQuestion('What are the best AI tools for trading?')">What are the best AI tools for trading?</li>
+                <li onclick="setQuestion('Can AI beat the stock market?')">Can AI beat the stock market?</li>
+            </ul>
         </div>
 
-        <div class="ai-results" id="ai-results">
-            <p>Results will appear here...</p>
+        <div class="answer-box" id="answer-box">
+            <h2>Answer:</h2>
+            <p id="answer-text">Select a question to see the answer.</p>
         </div>
     </section>
 
+    <!-- Footer (Ana səhifə ilə eyni) -->
     <footer>
         <p>&copy; 2025 Quant Script. All rights reserved.</p>
     </footer>
