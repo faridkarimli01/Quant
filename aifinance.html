@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Finance</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aifinance.css">
 </head>
 <body>
     <!-- Header (Ana səhifə ilə eyni) -->
@@ -18,7 +18,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="#">Our Services</a></li>
                 <li><a href="#">Blogs</a></li>
-                <li><a href="aifinance.html" class="active">AI Finance</a></li>
+                <li><a href="ai-finance.html" class="active">AI Finance</a></li>
                 <li><a href="#" class="btn">Sign Up</a></li>
             </ul>
         </nav>
@@ -30,25 +30,27 @@
         <p>Artificial Intelligence in Financial Markets</p>
     </section>
 
-    <!-- AI Finance üçün ORTA HİSSƏ (Tam Unikal Dizayn) -->
+    <!-- AI Finance üçün Yenilənmiş ORTA HİSSƏ -->
     <section class="ai-finance-section">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Enter your question...">
-            <button onclick="searchQuestion()">Search</button>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Enter your question about AI & Finance...">
+            <button onclick="searchQuestion()">🔍</button>
         </div>
 
-        <div class="suggested-questions">
-            <h2>Suggested Questions:</h2>
-            <ul>
-                <li onclick="setQuestion('How does AI predict stock prices?')">How does AI predict stock prices?</li>
-                <li onclick="setQuestion('What are the best AI tools for trading?')">What are the best AI tools for trading?</li>
-                <li onclick="setQuestion('Can AI beat the stock market?')">Can AI beat the stock market?</li>
-            </ul>
-        </div>
+        <div class="content-box">
+            <div class="suggested-questions">
+                <h2>Suggested Questions:</h2>
+                <ul>
+                    <li onclick="setQuestion('How does AI predict stock prices?')">How does AI predict stock prices?</li>
+                    <li onclick="setQuestion('What are the best AI tools for trading?')">What are the best AI tools for trading?</li>
+                    <li onclick="setQuestion('Can AI beat the stock market?')">Can AI beat the stock market?</li>
+                </ul>
+            </div>
 
-        <div class="answer-box" id="answer-box">
-            <h2>Answer:</h2>
-            <p id="answer-text">Select a question to see the answer.</p>
+            <div class="answer-box">
+                <h2>Answer:</h2>
+                <p id="answer-text">Select a question to see the answer.</p>
+            </div>
         </div>
     </section>
 
