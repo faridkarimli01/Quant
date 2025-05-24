@@ -3,51 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Quant Script</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Autonomous Vehicles Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(40, 40, 40, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(0, 150, 255, 0.3);
+        }
+        
+        .main-title {
+            font-size: 2.8em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #00ff88, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #b0b0b0;
+            font-weight: 300;
+        }
+        
+        .section {
+            margin-bottom: 45px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(0, 150, 255, 0.1) 0%, rgba(0, 255, 136, 0.05) 100%);
+            border-radius: 15px;
+            border-left: 4px solid #0096ff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.02), transparent);
+            pointer-events: none;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 150, 255, 0.2);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #0096ff, #00ff88);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5em;
+            box-shadow: 0 8px 16px rgba(0, 150, 255, 0.3);
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1em;
+            color: #00ff88;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+        
+        .content {
+            line-height: 1.8;
+            color: #d0d0d0;
+            font-size: 1.05em;
+        }
+        
+        .content p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: #00ff88;
+            font-weight: 600;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .stat-item {
+            background: rgba(0, 150, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #0096ff;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #b0b0b0;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-item {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #00ff88;
+        }
+        
+        .tech-name {
+            font-weight: 600;
+            color: #00ff88;
+            margin-bottom: 5px;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .main-title {
+                font-size: 2.2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .section-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="quantscript.png" alt="Logo">
+    <div class="container">
+        <div class="header floating">
+            <h1 class="main-title">Future Mobility Revolution</h1>
+            <h2 class="subtitle">Autonomous Vehicles (AV)</h2>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">AI Finance</a></li>
-                <li><a href="#" class="btn">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="about">
-        <h1>About</h1>
-        <p>Welcome to Quant Script! </p>
-
-           At Quant Script, we are a passionate team committed to transforming the way financial data is analyzed and understood.
-        Founded with the vision to bring complex financial data to everyone, we offer innovative solutions that make market analysis 
-        accessible and actionable for both seasoned investors and those new to the financial world. 
-        Our journey began with a simple goal: to bridge the gap between complex market trends and individuals who need clear, reliable
-        insights. With years of experience in finance, data science, and technology, we have created a platform that provides in-depth 
-        reports, cutting-edge AI-driven analytics, and interactive charts to help our users navigate the ever-changing world of finance.
-        At Quant Script, we believe that the power of data should be available to all. Whether you are managing your investments, 
-        analyzing market trends, or exploring new financial opportunities, our tools are designed to make your journey easier and more
-        insightful. We prioritize accuracy, timeliness, and simplicity in everything we do, so you can make informed decisions with 
-        confidence. Our team is driven by a shared passion for innovation. We continuously strive to incorporate the latest advancements
-        in data science and technology to ensure that our platform stays at the forefront of the financial analysis landscape.
-        By combining financial expertise with state-of-the-art tools, we aim to empower our users with the knowledge and support they
-        need to succeed in the financial markets. </p>
         
-        Thank you for choosing Quant Script. We are excited to be a part of your financial journey, 
-        helping you achieve your goals through data-driven insights and smart analysis.
-        We believe that everyone can make better financial decisions with the right tools—and we’re here to provide them.
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Quant Script. All rights reserved.</p>
-    </footer>
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon pulse">📈</div>
+                <div>
+                    <h3 class="section-title">Market Growth Potential</h3>
+                    <span class="section-subtitle">(Exponential Expansion)</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">$2.8T</span>
+                        <div class="stat-label">Global Market by 2030</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">33%</span>
+                        <div class="stat-label">Annual Growth Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95M</span>
+                        <div class="stat-label">Units by 2035</div>
+                    </div>
+                </div>
+                <p>The autonomous vehicle sector is experiencing <span class="highlight">unprecedented growth</span>, driven by technological breakthroughs and massive investments from tech giants and automotive manufacturers. Market projections indicate exponential expansion across all vehicle categories.</p>
+                <p>Key growth drivers include urbanization trends, aging populations seeking mobility solutions, environmental regulations pushing electric adoption, and the convergence of AI, 5G, and IoT technologies creating the perfect ecosystem for autonomous mobility.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon pulse">🚀</div>
+                <div>
+                    <h3 class="section-title">Innovation & Technology</h3>
+                    <span class="section-subtitle">(Breakthrough Technologies)</span>
+                </div>
+            </div>
+            <div class="content">
+                <p>Revolutionary technologies are converging to enable <span class="highlight">fully autonomous driving</span>, with breakthrough innovations in sensor fusion, neural networks, and edge computing transforming transportation infrastructure.</p>
+                
+                <div class="tech-list">
+                    <div class="tech-item">
+                        <div class="tech-name">LiDAR Evolution</div>
+                        <div>Solid-state sensors with 200m+ range and millimeter precision</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">AI Neural Networks</div>
+                        <div>Real-time decision making with 99.9% accuracy rates</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">5G Connectivity</div>
+                        <div>Ultra-low latency vehicle-to-everything communication</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Quantum Computing</div>
+                        <div>Advanced route optimization and traffic prediction</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Edge Processing</div>
+                        <div>Instant local computation for critical safety decisions</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Digital Twins</div>
+                        <div>Virtual testing environments for scenario simulation</div>
+                    </div>
+                </div>
+                
+                <p>The integration of these technologies creates <span class="highlight">synergistic effects</span>, where the combined capability exceeds individual component performance, enabling Level 5 autonomy across diverse driving conditions.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon pulse">⚖️</div>
+                <div>
+                    <h3 class="section-title">Critical Success Factors</h3>
+                    <span class="section-subtitle">(Market Dynamics)</span>
+                </div>
+            </div>
+            <div class="content">
+                <p><span class="highlight">Regulatory frameworks</span>, public acceptance, infrastructure readiness, and cybersecurity measures will determine the pace and scope of autonomous vehicle adoption across global markets.</p>
+                
+                <p><strong style="color: #0096ff;">Regulatory Environment:</strong> Government policies, safety standards, and liability frameworks are rapidly evolving to accommodate autonomous technologies. Progressive regulations in key markets like California, Singapore, and the EU are creating favorable conditions for deployment.</p>
+                
+                <p><strong style="color: #0096ff;">Infrastructure Transformation:</strong> Smart city initiatives, connected traffic systems, and dedicated AV lanes are being developed to optimize autonomous vehicle performance. The integration with existing transportation networks requires coordinated public-private partnerships.</p>
+                
+                <p><strong style="color: #0096ff;">Consumer Trust & Adoption:</strong> Public perception surveys show <span class="highlight">increasing acceptance</span>, particularly among younger demographics and urban populations. Successful pilot programs and transparent safety reporting are building confidence in autonomous systems.</p>
+                
+                <p><strong style="color: #0096ff;">Cybersecurity & Privacy:</strong> Advanced encryption, blockchain-based identity management, and secure communication protocols are essential for protecting vehicle networks and passenger data from malicious attacks.</p>
+                
+                <p>The convergence of favorable regulations, advanced infrastructure, growing consumer acceptance, and robust security measures will accelerate the transition to <span class="highlight">autonomous mobility ecosystems</span> that transform urban transportation paradigms.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
